@@ -1,6 +1,13 @@
 # Portfolio App - Expo React Native
 
-A modern, responsive portfolio application built with Expo, React Native, and TypeScript. Features a beautiful dark/light theme, floating tab navigation, and comprehensive project showcase.
+## UTS Project - Semester 4
+
+Nama: **Ardiyansyah**
+NPM: 623C0009
+Dosen Pengampu: **Mohammad Firdaus, M.Kom.**
+
+I'm passionate about creating beautiful, functional digital products that solve real-world problems.
+This portfolio app showcases my work as a full-stack developer and UI/UX designer. A modern, responsive portfolio application built with Expo, React Native, and TypeScript. Features a beautiful dark/light theme, floating tab navigation, and comprehensive project showcase.
 
 ## Features
 
@@ -20,39 +27,6 @@ A modern, responsive portfolio application built with Expo, React Native, and Ty
 - **Navigation**: Expo Router
 - **State Management**: Zustand (for theme)
 - **Icons**: Lucide React Native
-
-## Project Structure
-
-\`\`\`
-├── app/
-│   ├── _layout.tsx           # Root layout with theme provider
-│   └── (tabs)/
-│       ├── _layout.tsx       # Tab navigation layout
-│       ├── index.tsx         # Home screen
-│       ├── projects/
-│       │   ├── index.tsx     # Projects listing
-│       │   └── [id].tsx      # Project detail
-│       └── contact.tsx       # Contact screen
-├── components/
-│   ├── home/
-│   │   ├── skills-section.tsx
-│   │   ├── projects-preview.tsx
-│   │   ├── analytics-section.tsx
-│   │   └── experience-section.tsx
-│   └── ui/
-│       ├── progress-bar.tsx
-│       ├── card.tsx
-│       └── button.tsx
-├── context/
-│   └── theme-context.tsx 
-├── data/
-│   └── portfolio-data.ts
-├── types/
-│   └── index.ts
-└── utils/
-    ├── responsive.ts
-    └── theme.ts
-\`\`\`
 
 ## Getting Started
 
@@ -138,10 +112,6 @@ Works on:
 - iOS 13+
 - Android 5+
 - Web (via Expo Web)
-
-## License
-
-MIT
 
 ## Support
 

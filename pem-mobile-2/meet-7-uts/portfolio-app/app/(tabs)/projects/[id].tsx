@@ -7,6 +7,7 @@ import { useLocalSearchParams, useRouter } from "expo-router"
 import { projects } from "@/data/portfolio-data"
 import { ChevronLeft, ExternalLink } from "lucide-react-native"
 import ProjectsPreview from "@/components/home/projects-preview"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 export default function ProjectDetailScreen() {
   const { isDark } = useTheme()
@@ -15,6 +16,8 @@ export default function ProjectDetailScreen() {
 
   const { width } = useWindowDimensions()
   const isDesktop = width >= 768
+
+  const insets = useSafeAreaInsets()
 
   const project = projects.find((p) => p.id === id)
 
@@ -29,10 +32,20 @@ export default function ProjectDetailScreen() {
   const bgColor = isDark ? "#0f0f0f" : "#ffffff"
   const textColor = isDark ? "#ffffff" : "#000000"
   const secondaryText = isDark ? "#9ca3af" : "#6b7280"
-  const cardBg = isDark ? "#1a1a1a" : "#f9fafb"
+  const accentColor = isDark ? "#CC7755" : "#fbbf24"
 
   return (
-    <ScrollView style={tw.style("flex-1", { backgroundColor: bgColor })} showsVerticalScrollIndicator={false}>
+    <ScrollView
+        style={tw.style(
+        "flex-1", 
+        { 
+          backgroundColor: bgColor,
+          paddingTop: insets.top,
+          paddingBottom: insets.bottom, 
+        }
+      )} 
+      showsVerticalScrollIndicator={false}
+    >
       {/* Header */}
       <View style={tw`px-4 pt-4 pb-2 flex-row items-center`}>
         <Pressable onPress={() => router.back()} hitSlop={8}>
@@ -46,16 +59,16 @@ export default function ProjectDetailScreen() {
 
       {/* Project Info */}
       <View style={tw`px-4 py-6 max-w-4xl mx-auto`}>
-        <Text style={tw.style("text-3xl font-bold mb-2 text-center", { color: textColor })}>{project.title}</Text>
+        <Text style={tw.style("text-3xl font-bold mb-8 text-center", { color: textColor })}>{project.title}</Text>
         <Text style={tw.style("text-base mb-6 leading-6 text-center", { color: secondaryText })}>{project.description}</Text>
 
         {/* Tags */}
-        <View style={tw`flex-row gap-2 flex-wrap mb-6 mx-auto`}>
+        <View style={tw`flex-row gap-2 flex-wrap mb-6 items-center justify-center mx-auto`}>
           {project.tags.map((tag) => (
             <View
               key={tag}
               style={tw.style("px-3 py-1 rounded-full", {
-                backgroundColor: "#3b82f6",
+                backgroundColor: "#cc7755",
               })}
             >
               <Text style={tw`text-white text-xs font-medium`}>{tag}</Text>
@@ -88,7 +101,7 @@ export default function ProjectDetailScreen() {
               }
             }}
             style={tw.style("flex-row items-center justify-center py-3 px-4 rounded-full mt-6", {
-              backgroundColor: "#3b82f6",
+              backgroundColor: "#cc7755",
             })}
           >
             <Text style={tw`text-white font-semibold text-base`}>View Live Project</Text>

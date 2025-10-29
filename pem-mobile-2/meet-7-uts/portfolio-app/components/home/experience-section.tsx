@@ -14,7 +14,8 @@ export default function ExperienceSection({ isDark, experience }: ExperienceSect
   const textColor = isDark ? "#fff" : "#111"
   const secondaryText = isDark ? "#9ca3af" : "#6b7280"
   const bgCard = isDark ? "#1a1a1a" : "#ffffff"
-  const borderLeft = isDark ? "#3b82f6" : "#2563eb"
+  const borderLeft = isDark ? "#CC7755" : "#fbbf24" 
+  const accentColor = isDark ? "#CC7755" : "#fbbf24"
 
   const iconMap = [
     "school-outline",
@@ -46,7 +47,7 @@ export default function ExperienceSection({ isDark, experience }: ExperienceSect
               <Ionicons
                 name={iconMap[index % iconMap.length] as any}
                 size={28}
-                color="#3b82f6"
+                color={accentColor}
               />
             </View>
 
@@ -54,7 +55,7 @@ export default function ExperienceSection({ isDark, experience }: ExperienceSect
               <Text style={tw.style("text-lg font-semibold", { color: textColor })}>
                 {exp.title}
               </Text>
-              <Text style={tw.style("text-sm", { color: "#3b82f6" })}>
+              <Text style={tw.style("text-sm", { color: accentColor, marginBottom: 4 })}>
                 {exp.company}
               </Text>
               <Text style={tw.style("text-xs mb-2", { color: secondaryText })}>

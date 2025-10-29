@@ -19,6 +19,7 @@ import ProjectsPreview from "@/components/home/projects-preview"
 import AnalyticsSection from "@/components/home/analytics-section"
 import ExperienceSection from "@/components/home/experience-section"
 import { Ionicons } from "@expo/vector-icons"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 const DESKTOP_BREAKPOINT = 768
 
@@ -28,26 +29,38 @@ export default function HomeScreen() {
   const { width } = useWindowDimensions()
   const isDesktop = width >= DESKTOP_BREAKPOINT 
 
+  const insets = useSafeAreaInsets()
+
   const bgColor = isDark ? "#0f0f0f" : "#ffffff"
   const textColor = isDark ? "#ffffff" : "#000000"
   const secondaryText = isDark ? "#9ca3af" : "#6b7280"
   const borderColor = isDark ? "#333333" : "#e5e5e5"
   const iconColor = isDark ? "#f3f4f6" : "#1f2937"
+  const accentColor = isDark ? "#CC7755" : "#fbbf24"
 
   const openLink = async (url: string) => {
     if (url) await Linking.openURL(url)
   }
 
   return (
-    <ScrollView style={tw.style("flex-1", { backgroundColor: bgColor })} showsVerticalScrollIndicator={false}>
+    <ScrollView
+    style={tw.style(
+        "flex-1", 
+        { 
+          backgroundColor: bgColor,
+          paddingTop: insets.top,
+          paddingBottom: insets.bottom, 
+        }
+      )} 
+      showsVerticalScrollIndicator={false}>
       {/* Header (Full-width) */}
       <View style={tw`px-8 pt-4 pb-2 flex-row justify-between items-center`}>
         <Text style={tw.style("text-2xl font-bold", { color: textColor })}>623C0009</Text>
         <Pressable onPress={toggleTheme} style={tw`p-2 rounded-full`} hitSlop={8}>
           {isDark ? (
-            <Sun size={24} color="#fbbf24" strokeWidth={2} />
+            <Sun size={24} color="#CC7755" strokeWidth={2} />
           ) : (
-            <Moon size={24} color="#3b82f6" strokeWidth={2} />
+            <Moon size={24} color="#fbbf24" strokeWidth={2} />
           )}
         </Pressable>
       </View>
@@ -73,7 +86,7 @@ export default function HomeScreen() {
             defaultSource={require("@/assets/img/placeholder.jpg")}
           />
           <Text style={tw.style("text-4xl font-bold text-center mb-2", { color: textColor })}>{profileData.name}</Text>
-          <Text style={tw.style("text-lg font-semibold text-center mb-1", { color: "#3b82f6" })}>
+          <Text style={tw.style("text-lg font-semibold text-center mb-1", { color: "#CC7755" })}>
             {profileData.title}
           </Text>
           <Text style={tw.style("text-sm text-center mb-4", { color: secondaryText })}>📍 {profileData.location}</Text>
@@ -173,7 +186,7 @@ export default function HomeScreen() {
           <Pressable
             onPress={() => router.push("/(tabs)/projects")}
             style={tw.style("py-4 px-6 rounded-full", {
-              backgroundColor: "#3b82f6",
+              backgroundColor: "#CC7755",
             })}
           >
             <Text style={tw`text-white font-semibold text-base`}>View All Projects</Text>
@@ -181,7 +194,11 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <View style={tw`mt-12 p-6 bg-blue-500 shadow-lg py-20`}>
+      <View
+        style={tw.style(
+        "mt-12 p-6 shadow-lg py-20",
+        { backgroundColor: "#fbbf24" }
+      )}>
         <Text style={tw`text-white text-4xl font-bold mb-2 text-center`}>
           Ready to Collaborate?
         </Text>
@@ -192,7 +209,7 @@ export default function HomeScreen() {
           onPress={() => router.push("/contact")}
           style={tw`bg-white rounded-full py-3 px-6 mx-auto`}
         >
-          <Text style={tw`text-blue-600 font-semibold`}>Get in Touch</Text>
+          <Text style={tw`text-[#cc7755] font-semibold`}>Get in Touch</Text>
         </Pressable>
       </View>
     </ScrollView>

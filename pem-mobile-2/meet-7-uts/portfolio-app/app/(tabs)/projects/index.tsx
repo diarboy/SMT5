@@ -7,6 +7,7 @@ import { Moon, Sun } from "lucide-react-native"
 import { useRouter } from "expo-router"
 import { projects } from "@/data/portfolio-data"
 import { ChevronRight } from "lucide-react-native"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 export default function ProjectsScreen() {
   const { isDark, toggleTheme } = useTheme()
@@ -16,6 +17,8 @@ export default function ProjectsScreen() {
   const isDesktop = width >= 768
   const imageHeight = isDesktop ? 280 : 192
 
+  const insets = useSafeAreaInsets()
+
   const bgColor = isDark ? "#0f0f0f" : "#ffffff"
   const textColor = isDark ? "#ffffff" : "#000000"
   const secondaryText = isDark ? "#9ca3af" : "#6b7280"
@@ -24,17 +27,22 @@ export default function ProjectsScreen() {
 
   return (
     <ScrollView
-      style={tw.style("flex-1", { backgroundColor: bgColor })}
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={tw`pb-8`}
-    >
+    style={tw.style(
+        "flex-1", 
+        { 
+          backgroundColor: bgColor,
+          paddingTop: insets.top,
+          paddingBottom: insets.bottom, 
+        }
+      )} 
+      showsVerticalScrollIndicator={false}>
       
     <View style={tw`px-8 pt-4 pb-2 flex-row justify-end items-center`}>
       <Pressable onPress={toggleTheme} style={tw`p-2 rounded-full`} hitSlop={8}>
         {isDark ? (
-          <Sun size={24} color="#fbbf24" strokeWidth={2} />
+          <Sun size={24} color="#CC7755" strokeWidth={2} />
         ) : (
-          <Moon size={24} color="#3b82f6" strokeWidth={2} />
+          <Moon size={24} color="#fbbf24" strokeWidth={2} />
         )}
       </Pressable>
     </View>

@@ -12,6 +12,7 @@ export default function AnalyticsSection({ isDark }: AnalyticsSectionProps) {
   const textColor = isDark ? "#ffffff" : "#000000"
   const secondaryText = isDark ? "#9ca3af" : "#6b7280"
   const bgColor = isDark ? "#1a1a1a" : "#f9fafb"
+  const accentColor = isDark ? "#CC7755" : "#fbbf24"
 
   const isLarge = width > 768
   const numColumns = isLarge ? 4 : 2
@@ -37,7 +38,7 @@ export default function AnalyticsSection({ isDark }: AnalyticsSectionProps) {
               elevation: 4,
             })}
           >
-            <Text style={tw.style("text-3xl font-bold mb-2", { color: "#3b82f6" })}>{stat.value}</Text>
+            <Text style={tw.style("text-3xl font-bold mb-2", { color: accentColor })}>{stat.value}</Text>
             <Text style={tw.style("text-sm text-center", { color: secondaryText })}>{stat.label}</Text>
           </View>
         ))}

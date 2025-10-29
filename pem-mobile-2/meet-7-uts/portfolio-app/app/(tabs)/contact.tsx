@@ -16,6 +16,7 @@ import { Moon, Sun } from "lucide-react-native"
 import { useState } from "react"
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from "lucide-react-native"
 import { profileData } from "@/data/portfolio-data"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 const DESKTOP_BREAKPOINT = 768
 
@@ -23,6 +24,8 @@ export default function ContactScreen() {
   const { isDark, toggleTheme } = useTheme()
   const { width } = useWindowDimensions()
   const isDesktop = width >= DESKTOP_BREAKPOINT
+
+  const insets = useSafeAreaInsets()
 
   const [formData, setFormData] = useState({
     name: "",
@@ -39,6 +42,7 @@ export default function ContactScreen() {
   const inputBg = isDark ? "#1a1a1a" : "#f9fafb"
   const inputBorder = isDark ? "#333333" : "#e5e5e5"
   const placeholderColor = isDark ? "#6b7280" : "#9ca3af"
+  const accentColor = isDark ? "#CC7755" : "#fbbf24"
 
   const cardStyle = tw.style(
     "p-6 rounded-lg border w-full",
@@ -77,13 +81,23 @@ export default function ContactScreen() {
   ]
 
   return (
-    <ScrollView style={tw.style("flex-1", { backgroundColor: bgColor })} showsVerticalScrollIndicator={false}>
+    <ScrollView
+      style={tw.style(
+        "flex-1", 
+        { 
+          backgroundColor: bgColor,
+          paddingTop: insets.top,
+          paddingBottom: insets.bottom, 
+        }
+      )} 
+      showsVerticalScrollIndicator={false}
+    >
       <View style={tw`px-8 pt-4 pb-2 flex-row justify-end items-center`}>
         <Pressable onPress={toggleTheme} style={tw`p-2 rounded-full`} hitSlop={8}>
           {isDark ? (
-            <Sun size={24} color="#fbbf24" strokeWidth={2} />
+            <Sun size={24} color="#cc7755" strokeWidth={2} />
           ) : (
-            <Moon size={24} color="#3b82f6" strokeWidth={2} />
+            <Moon size={24} color="#fbbf24" strokeWidth={2} />
           )}
         </Pressable>
       </View>
@@ -108,15 +122,15 @@ export default function ContactScreen() {
               <Text style={tw.style("text-2xl font-bold mb-6 text-center", { color: textColor })}>Contact Information</Text>
 
               <Pressable onPress={handleEmail} style={tw`flex-row items-center mb-5`}>
-                <Mail size={22} color="#3b82f6" strokeWidth={2} />
+                <Mail size={22} color={accentColor} strokeWidth={2} />
                 <Text style={tw.style("ml-4 text-base", { color: textColor })}>{profileData.email}</Text>
               </Pressable>
               <Pressable onPress={handlePhone} style={tw`flex-row items-center mb-5`}>
-                <Phone size={22} color="#3b82f6" strokeWidth={2} />
+                <Phone size={22} color={accentColor} strokeWidth={2} />
                 <Text style={tw.style("ml-4 text-base", { color: textColor })}>{profileData.phone}</Text>
               </Pressable>
               <View style={tw`flex-row items-center mb-8`}>
-                <MapPin size={22} color="#3b82f6" strokeWidth={2} />
+                <MapPin size={22} color={accentColor} strokeWidth={2} />
                 <Text style={tw.style("ml-4 text-base", { color: textColor })}>{profileData.location}</Text>
               </View>
 
@@ -128,11 +142,11 @@ export default function ContactScreen() {
                   <Pressable
                     key={social.label}
                     onPress={() => handleSocialPress(social.url)}
-                    style={tw.style("p-3 rounded-lg", {
+                    style={tw.style("p-3 rounded-full", {
                         backgroundColor: isDark ? "#2a2a2a" : "#f0f0f0", 
                     })}
                   >
-                    <social.icon size={24} color="#3b82f6" strokeWidth={2} />
+                    <social.icon size={24} color={accentColor} strokeWidth={2} />
                   </Pressable>
                 ))}
               </View>
@@ -207,7 +221,7 @@ export default function ContactScreen() {
                 onPress={handleSubmit}
                 disabled={loading}
                 style={tw.style("flex-row items-center justify-center py-3 px-6 rounded-full w-full",
-                  { backgroundColor: loading ? "#9ca3af" : "#3b82f6",
+                  { backgroundColor: accentColor,
                 })}
               >
                 <Text style={tw`text-white font-semibold text-base`}>{loading ? "Sending..." : "Send Message"}</Text>

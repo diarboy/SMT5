@@ -27,7 +27,7 @@ export default function ProjectsPreview({ isDark, projects, title = "Featured Pr
       <View style={tw`items-center mb-12`}>
         <Text style={tw.style("text-4xl font-bold text-center", { color: textColor })}>{title}</Text>
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} scrollEventThrottle={16}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={true} scrollEventThrottle={16}>
         <View style={tw`flex-row gap-4`}>
           {projects.slice(0, 4).map((project) => (
             <Pressable

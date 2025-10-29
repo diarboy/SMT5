@@ -4,6 +4,7 @@
     "slug": "portfolio",
     "version": "1.0.0",
     "orientation": "portrait",
+    "scheme": "ardisyahportfolio",
     "icon": "./assets/img/favicon.png",
     "userInterfaceStyle": "automatic",
     "splash": {

@@ -104,7 +104,7 @@ export const projects: Project[] = [
         title: "Real-Time Reports",
         description:
           "Delivered interactive dashboards with income/expense charts, occupancy metrics, and exportable CSV/PDF statements. Features include date-range filtering, trend analysis, and automated monthly reports to help owners make informed financial decisions quickly.",
-        image: require("@/assets/img/reporting.svg"),
+        image: require("@/assets/img/reporting.png"),
       },
     ],
     link: "https://github.com/diarboy",

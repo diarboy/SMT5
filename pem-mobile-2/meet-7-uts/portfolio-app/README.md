@@ -1,10 +1,10 @@
 # Portfolio App - Expo React Native
 
-## UTS Project - Semester 4
+## UTS Project - Semester 5
 
-Nama: **Ardiyansyah**
+Name: **Ardiyansyah**
 NPM: 623C0009
-Dosen Pengampu: **Mohammad Firdaus, M.Kom.**
+Lecture: **Mohammad Firdaus, M.Kom.**
 
 I'm passionate about creating beautiful, functional digital products that solve real-world problems.
 This portfolio app showcases my work as a full-stack developer and UI/UX designer. A modern, responsive portfolio application built with Expo, React Native, and TypeScript. Features a beautiful dark/light theme, floating tab navigation, and comprehensive project showcase.

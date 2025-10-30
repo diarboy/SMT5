@@ -15,6 +15,10 @@ Dosen : **Mohammad Firdaus, M.Kom.**
   - **Projects**: Detailed project listing with individual project detail pages
   - **Contact**: Contact information and message form
 
+## Captures
+![home-dark.png](./assets/capture/home-light.png)
+
+
 ## Getting Started
 
 cd pem-mobile-2/meet-7-uts/portfolio-app

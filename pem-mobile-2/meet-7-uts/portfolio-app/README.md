@@ -2,31 +2,18 @@
 
 ## UTS Project - Semester 5
 
-Name: **Ardiyansyah**
-NPM: 623C0009
-Lecture: **Mohammad Firdaus, M.Kom.**
-
-I'm passionate about creating beautiful, functional digital products that solve real-world problems.
-This portfolio app showcases my work as a full-stack developer and UI/UX designer. A modern, responsive portfolio application built with Expo, React Native, and TypeScript. Features a beautiful dark/light theme, floating tab navigation, and comprehensive project showcase.
+Nama: **Ardiyansyah**
+NPM : 623C0009
+Dosen : **Mohammad Firdaus, M.Kom.**
 
 ## Features
 
-- **Modern Design**: Clean, professional UI with smooth animations
-- **Dark/Light Theme**: Full theme support with persistent storage
-- **Responsive Layout**: Optimized for mobile and tablet devices
+- **Dark/Light Theme**
+- **Responsive Layout**: Optimized for mobile devices
 - **Three Main Screens**:
   - **Home**: Hero section with profile, skills, experience, projects preview, and analytics
   - **Projects**: Detailed project listing with individual project detail pages
   - **Contact**: Contact information and message form
-
-## Tech Stack
-
-- **Framework**: Expo with React Native
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS (twrnc)
-- **Navigation**: Expo Router
-- **State Management**: Zustand (for theme)
-- **Icons**: Lucide React Native
 
 ## Getting Started
 
@@ -56,7 +43,7 @@ cd pem-mobile-2/meet-7-uts/portfolio-app
    - `a` for Android emulator
    - `w` for web
 
-## Features Breakdown
+## Features
 
 ### Home Screen
 - Profile hero section with avatar, name, title, and location
@@ -64,7 +51,6 @@ cd pem-mobile-2/meet-7-uts/portfolio-app
 - Experience timeline
 - Skills with progress bars
 - Featured projects carousel
-- Analytics dashboard
 
 ### Projects Screen
 - Grid/list view of all projects
@@ -83,19 +69,10 @@ cd pem-mobile-2/meet-7-uts/portfolio-app
 - Contact form with validation
 - Theme-aware styling
 
-## Theme System
-
-The app includes a comprehensive theme system:
-- Automatic detection of system theme preference
-- Manual theme toggle
-- Persistent theme preference using AsyncStorage
-- Consistent color palette across all screens
-
 ## Responsive Design
 
 The app is fully responsive with:
 - Mobile-first approach
-- Tablet optimization
 - Adaptive layouts based on screen size
 - Flexible spacing and typography
 
@@ -109,7 +86,7 @@ The app is fully responsive with:
 ## Browser Support
 
 Works on:
-- iOS 13+
+- Expo Go SDK 54.0.21
 - Android 5+
 - Web (via Expo Web)
 

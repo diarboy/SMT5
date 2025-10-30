@@ -50,7 +50,7 @@ export default function ProjectsScreen() {
       {/* Header */}
       <View style={tw`px-4 pt-6 pb-4 items-center`}>
         <Text style={tw.style("text-4xl font-bold", { color: textColor })}>Projects</Text>
-        <Text style={tw.style("text-base mt-2 mb-8", { color: secondaryText })}>
+        <Text style={tw.style("text-base mt-2 mb-4", { color: secondaryText })}>
           Explore my recent work and case studies
         </Text>
       </View>

@@ -55,7 +55,7 @@ export default function HomeScreen() {
       showsVerticalScrollIndicator={false}>
       {/* Header (Full-width) */}
       <View style={tw`px-8 pt-4 pb-2 flex-row justify-between items-center`}>
-        <Text style={tw.style("text-2xl font-bold", { color: textColor })}>623C0009</Text>
+        <Text style={tw.style("text-xl font-bold", { color: textColor })}>623C0009</Text>
         <Pressable onPress={toggleTheme} style={tw`p-2 rounded-full`} hitSlop={8}>
           {isDark ? (
             <Sun size={24} color="#CC7755" strokeWidth={2} />
@@ -186,7 +186,7 @@ export default function HomeScreen() {
           <Pressable
             onPress={() => router.push("/(tabs)/projects")}
             style={tw.style("py-4 px-6 rounded-full", {
-              backgroundColor: "#CC7755",
+              backgroundColor: accentColor,
             })}
           >
             <Text style={tw`text-white font-semibold text-base`}>View All Projects</Text>
@@ -209,7 +209,7 @@ export default function HomeScreen() {
           onPress={() => router.push("/contact")}
           style={tw`bg-white rounded-full py-3 px-6 mx-auto`}
         >
-          <Text style={tw`text-[#cc7755] font-semibold`}>Get in Touch</Text>
+          <Text style={tw`text-[#fbbf24] font-semibold`}>Get in Touch</Text>
         </Pressable>
       </View>
     </ScrollView>

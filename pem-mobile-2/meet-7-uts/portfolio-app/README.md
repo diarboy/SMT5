@@ -81,12 +81,20 @@ cd pem-mobile-2/meet-7-uts/portfolio-app
 - Contact form with validation
 - Theme-aware styling
 
+<p align="center">
+  <img src="./assets/capture/contact-screen.png" width="100%" alt="Contact" />
+<p>
+
 ## Responsive Design
 
 The app is fully responsive with:
 - Mobile-first approach
 - Adaptive layouts based on screen size
 - Flexible spacing and typography
+
+<p align="center">
+  <img src="./assets/capture/features-project.png" width="100%" alt="Features" />
+<p>
 
 ## Performance Optimizations
 

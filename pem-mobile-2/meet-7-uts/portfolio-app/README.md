@@ -29,7 +29,7 @@
 
 ## Getting Started
 
-cd pem-mobile-2/meet-7-uts/portfolio-app
+`cd pem-mobile-2/meet-7-uts/portfolio-app`
 
 ### Prerequisites
 
@@ -41,14 +41,10 @@ cd pem-mobile-2/meet-7-uts/portfolio-app
 1. Clone the repository
 
 2. Install dependencies:
-   \`\`\`bash
-   npm install
-   \`\`\`
+   `npm install`
 
 3. Start the development server:
-   \`\`\`bash
-   npm start
-   \`\`\`
+   `npm start`
 
 4. Open in Expo Go app or press:
    - `i` for iOS simulator

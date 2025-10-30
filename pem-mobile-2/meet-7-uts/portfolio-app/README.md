@@ -2,9 +2,12 @@
 
 ## UTS Project - Semester 5
 
-Nama: **Ardiyansyah**
-NPM : 623C0009
-Dosen : **Mohammad Firdaus, M.Kom.**
+- Nama: **Ardiyansyah**
+- NPM : 623C0009
+- Dosen : **Mohammad Firdaus, M.Kom.**
+
+## Captures
+![home-dark.png](./assets/capture/home-light.png)
 
 ## Features
 
@@ -15,9 +18,14 @@ Dosen : **Mohammad Firdaus, M.Kom.**
   - **Projects**: Detailed project listing with individual project detail pages
   - **Contact**: Contact information and message form
 
-## Captures
-![home-dark.png](./assets/capture/home-light.png)
+## App Screenshots
 
+<p align="center">
+  <img src="./assets/capture/home-dark.png" width="22%" alt="Home Screen" />
+  <img src="./assets/capture/project-screen.png" width="22%" alt="Project Screen" />
+  <img src="./assets/capture/project-screen-features.png" width="22%" alt="Projects Features" />
+  <img src="./assets/capture/project-details.png" width="22%" alt="Detail Screen" />
+</p>
 
 ## Getting Started
 

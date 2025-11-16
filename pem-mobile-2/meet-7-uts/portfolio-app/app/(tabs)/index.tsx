@@ -74,7 +74,7 @@ export default function HomeScreen() {
 
         <View
           style={tw.style(
-            "py-8",
+            "py-2",
             isDesktop ? "flex-row items-center justify-between" : "items-center"
           )}
         >
@@ -92,7 +92,7 @@ export default function HomeScreen() {
           <Text style={tw.style("text-sm text-center mb-4", { color: secondaryText })}>📍 {profileData.location}</Text>
           
           {/* Social Icons */}
-          <View style={tw`flex-row justify-center mb-6`}>
+          <View style={tw`flex-row justify-center`}>
             {profileData.social?.github && (
               <Pressable
                 onPress={() => openLink(profileData.social.github)}
@@ -197,7 +197,7 @@ export default function HomeScreen() {
       <View
         style={tw.style(
         "mt-12 p-6 shadow-lg py-20",
-        { backgroundColor: "#fbbf24" }
+        { backgroundColor: "#121212" }
       )}>
         <Text style={tw`text-white text-4xl font-bold mb-2 text-center`}>
           Ready to Collaborate?
@@ -207,9 +207,9 @@ export default function HomeScreen() {
         </Text>
         <Pressable
           onPress={() => router.push("/contact")}
-          style={tw`bg-white rounded-full py-3 px-6 mx-auto`}
+          style={tw`bg-[#303030] rounded-full py-3 px-6 mx-auto`}
         >
-          <Text style={tw`text-[#fbbf24] font-semibold`}>Get in Touch</Text>
+          <Text style={tw`text-white font-semibold`}>Get in Touch</Text>
         </Pressable>
       </View>
     </ScrollView>
